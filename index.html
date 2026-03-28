@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>電車クイズ - 鉄道車両を当てよう</title>
     <meta name="description" content="電車の写真を見て4択で車両名を当てる鉄道クイズアプリ" />
+    <script>
+      // GitHub Pages SPA redirect handler
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="app"></div>
