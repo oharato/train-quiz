@@ -24,7 +24,7 @@ export const useTrainsStore = defineStore('trains', {
       this.loading = true;
       this.error = null;
       try {
-        const res = await fetch('/trains.json');
+        const res = await fetch(`${import.meta.env.BASE_URL}trains.json`);
         if (!res.ok) throw new Error('データの取得に失敗しました');
         this.trains = await res.json();
       } catch (e) {
